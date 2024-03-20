@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+// import MuiTable1 from "./components/MuiTable1";
+// import MuiTable2 from "./components/MuiTable2";
+// import MuiTable3 from "./components/MuiTable3";
+import MuiTable4 from "./components/MuiTable4";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <MuiTable1/> */}
+      {/* <MuiTable2/> */}
+      {/* <MuiTable3/> */}
+      <MuiTable4/>
+    </>
   );
 }
 
