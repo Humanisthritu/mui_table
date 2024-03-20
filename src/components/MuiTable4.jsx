@@ -20,15 +20,16 @@ import UserDetails4 from "./UserDetails4/UserDetails4";
 const MuiTable4 = () => {
   const [loading, setLoading] = useState(true);
   const [peopleData, setPeopleData] = useState([]);
-  const [inData , setInData] = useState()
-
-  const [open, setOpen] = useState(false);
+  const [inData, setInData] = useState();
+  const [open, setOpen] = useState("");
 
   useEffect(() => {
     setLoading(true);
     setRows(data);
     setLoading(false);
   });
+
+
 
   const setRows = (res) => {
     const row = res.map((r) => {
@@ -47,28 +48,26 @@ const MuiTable4 = () => {
     setPeopleData(row);
   };
 
-  const handleClick = (userData) => {
-    console.log(userData)
-    setInData(userData)
-    setOpen(true);
-
+  const handleClick = (userData ) => {
+ 
+    setInData(userData);
+    setOpen('hgf')
+   
   };
 
   const handleClose = () => {
-    setOpen(false);
+    setOpen("");
   };
 
   return (
     <>
-      
       {loading ? (
         <CircularProgress />
       ) : (
         <>
           <Box>
-            <Dialog fullWidth open={open} onClose={handleClose}>
-                
-                <UserDetails4 inData={inData}  handleClose={() => handleClose()}/>
+            <Dialog fullWidth open={open.length > 0} onClose={handleClose}>
+              <UserDetails4 inData={inData} handleClose={() => handleClose()} />
             </Dialog>
             <TableContainer>
               <Typography variant="h4" align="center" padding={3}>
